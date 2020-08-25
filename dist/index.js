@@ -74,6 +74,13 @@ class BoltLogger {
         this.inheritedData = Object.assign(Object.assign({}, ((_a = this.inheritedData) !== null && _a !== void 0 ? _a : {})), appendData);
         return this;
     }
+    /**
+     * Shortcut for logging single message attribute log {message: "..."} then enriched with appendData if any
+     * @param val
+     */
+    message(val) {
+        return this.log({ message: val });
+    }
     _debug() {
         return this.instance;
     }

@@ -1,6 +1,6 @@
 {
   "name": "306-boltlogger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Logging wrapper that write json formatted logs",
   "repository": {"url": "https://github.com/ohm-s/boltlogger"},
   "main": "dist/index.js",

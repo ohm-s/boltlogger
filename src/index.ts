@@ -80,6 +80,15 @@ export class BoltLogger {
     return this;
   }
 
+
+  /**
+   * Shortcut for logging single message attribute log {message: "..."} then enriched with appendData if any
+   * @param val 
+   */
+  message(val: string) {
+    return this.log({message: val});
+  }
+
   _debug() {
     return this.instance;
   }

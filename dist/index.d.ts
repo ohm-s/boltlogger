@@ -24,6 +24,11 @@ export declare class BoltLogger {
      * @param appendData
      */
     pushExtraData(appendData: Record<scalar, any>): BoltLogger;
+    /**
+     * Shortcut for logging single message attribute log {message: "..."} then enriched with appendData if any
+     * @param val
+     */
+    message(val: string): void;
     _debug(): debug.Debugger;
 }
 export default BoltLogger;
