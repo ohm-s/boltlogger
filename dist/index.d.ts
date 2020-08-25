@@ -18,6 +18,12 @@ export declare class BoltLogger {
     }): void;
     verbose(record: Record<scalar, any>): void;
     extend(namespace: string, appendData?: Record<scalar, any>): BoltLogger;
+    /**
+     * Pushes extra data on the current stack to be added on ever subsequent log call
+     * Return the instance itself for convenience
+     * @param appendData
+     */
+    pushExtraData(appendData: Record<scalar, any>): BoltLogger;
     _debug(): debug.Debugger;
 }
 export default BoltLogger;

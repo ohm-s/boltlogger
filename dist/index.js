@@ -64,6 +64,16 @@ class BoltLogger {
         var _a;
         return new BoltLogger(this.instance.extend(namespace), Object.assign(Object.assign({}, ((_a = this.inheritedData) !== null && _a !== void 0 ? _a : {})), (appendData !== null && appendData !== void 0 ? appendData : {})));
     }
+    /**
+     * Pushes extra data on the current stack to be added on ever subsequent log call
+     * Return the instance itself for convenience
+     * @param appendData
+     */
+    pushExtraData(appendData) {
+        var _a;
+        this.inheritedData = Object.assign(Object.assign({}, ((_a = this.inheritedData) !== null && _a !== void 0 ? _a : {})), appendData);
+        return this;
+    }
     _debug() {
         return this.instance;
     }

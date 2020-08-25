@@ -67,6 +67,19 @@ export class BoltLogger {
     });
   }
 
+  /**
+   * Pushes extra data on the current stack to be added on ever subsequent log call
+   * Return the instance itself for convenience
+   * @param appendData
+   */
+  pushExtraData(appendData: Record<scalar, any>): BoltLogger {
+    this.inheritedData = {
+      ...(this.inheritedData ?? {}),
+      ...appendData,
+    };
+    return this;
+  }
+
   _debug() {
     return this.instance;
   }
